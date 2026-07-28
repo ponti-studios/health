@@ -9,23 +9,6 @@ interface MedicationSchedule {
   description: string;
 }
 
-function calculateDosages(weeklyDosages: number[], prescription: number): number {
-  let weeks = 0;
-  let remaining = prescription;
-
-  for (const dosage of weeklyDosages) {
-    if (dosage <= remaining) {
-      weeks += 1;
-      remaining -= dosage;
-    } else {
-      weeks += remaining / dosage;
-      break;
-    }
-  }
-
-  return weeks;
-}
-
 export default function MedicationRoute(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
   const [schedule, setSchedule] = useState<MedicationSchedule | null>(null);
