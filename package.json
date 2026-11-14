@@ -18,7 +18,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@ponti-studios/ui": "0.4.0",
+    "@ponti-studios/ui": "0.8.0",
     "@react-router/node": "^8.2.0",
     "@react-router/serve": "^8.2.0",
     "@tanstack/react-query": "^5.101.3",

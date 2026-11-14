@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ponti-studios/ui':
-        specifier: 0.4.0
-        version: 0.4.0(@date-fns/tz@1.5.0)(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: 0.8.0
+        version: 0.8.0(@date-fns/tz@1.5.0)(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@react-router/node':
         specifier: ^8.2.0
         version: 8.3.0(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@6.0.3)
@@ -619,11 +619,17 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
-  '@ponti-studios/ui@0.4.0':
-    resolution: {integrity: sha512-LqyEX2sDA9kQY/2zlslGqR/P6s+cJ/YDHDrGLyPI+vGkWhPVCDJW2rRMeXlo3U2pk99z1v5eAQZtredg5bFlQg==}
+  '@ponti-studios/ui@0.8.0':
+    resolution: {integrity: sha512-Q2BXNK42fTqw71NZZ4QFyHZBPMnqS4b1MBtBpkkuP+t/GoGV5i2Is+75vvmduHbTQYTmyIH/PDy0dIMTIVIy0Q==}
     peerDependencies:
       react: ^18.2.0 || ^19.0.0
       react-dom: ^18.2.0 || ^19.0.0
+      react-native: '>=0.74'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
 
   '@radix-ui/colors@3.0.0':
     resolution: {integrity: sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg==}
@@ -2454,7 +2460,7 @@ snapshots:
     dependencies:
       playwright: 1.62.0
 
-  '@ponti-studios/ui@0.4.0(@date-fns/tz@1.5.0)(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@ponti-studios/ui@0.8.0(@date-fns/tz@1.5.0)(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@base-ui/react': 1.6.0(@date-fns/tz@1.5.0)(@types/react@19.2.17)(date-fns@4.4.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@radix-ui/colors': 3.0.0
@@ -2464,8 +2470,9 @@ snapshots:
       lucide-react: 1.27.0(react@19.2.8)
       react: 19.2.8
       react-day-picker: 10.0.1(@types/react@19.2.17)(react@19.2.8)
-      react-dom: 19.2.8(react@19.2.8)
       tailwind-merge: 3.6.0
+    optionalDependencies:
+      react-dom: 19.2.8(react@19.2.8)
     transitivePeerDependencies:
       - '@date-fns/tz'
       - '@types/react'
