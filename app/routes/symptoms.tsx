@@ -1,5 +1,4 @@
-import { Input } from "@ponti-studios/ui/forms";
-import { Label } from "@ponti-studios/ui/primitives";
+import { Input, Label } from "@ponti-studios/ui/forms";
 import { useSymptomForm } from "../hooks/use-symptom-form";
 import { TREATMENT_GUIDANCE, type TreatmentGuidance } from "../types/symptom";
 import SymptomCard from "../components/symptom-card";
