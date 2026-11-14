@@ -1,5 +1,4 @@
-import { Label } from "@ponti-studios/ui/primitives";
-import { Slider } from "@ponti-studios/ui/forms";
+import { Label, Slider } from "@ponti-studios/ui/forms";
 import { useParams, useNavigate, Link } from "react-router";
 import { useState } from "react";
 import { Button } from "@ponti-studios/ui/primitives";

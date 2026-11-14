@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
   useLocation,
 } from "react-router";
-import { AppNavigation } from "@ponti-studios/ui/navigation";
+import { Navigation } from "@ponti-studios/ui/navigation";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -26,6 +26,13 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap",
   },
+];
+
+const NAV_LINKS = [
+  { to: "/", label: "Dashboard" },
+  { to: "/symptoms", label: "Symptoms" },
+  { to: "/appointments", label: "Appointments" },
+  { to: "/hospitals", label: "Hospitals" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -51,19 +58,18 @@ export default function App() {
   return (
     <QueryProvider>
       <SymptomProvider>
-        <AppNavigation
-          brand="Health"
-          brandHref="/"
-          links={[
-            { href: "/", label: "Dashboard" },
-            { href: "/symptoms", label: "Symptoms" },
-            { href: "/appointments", label: "Appointments" },
-            { href: "/hospitals", label: "Hospitals" },
-          ]}
-          activeHref={location.pathname}
-          linkComponent={Link}
-          linkProp="to"
-        />
+        <Navigation>
+          <Navigation.Brand>
+            <Link to="/">Health</Link>
+          </Navigation.Brand>
+          <Navigation.List>
+            {NAV_LINKS.map(({ to, label }) => (
+              <Navigation.Item key={to} asChild active={location.pathname === to}>
+                <Link to={to}>{label}</Link>
+              </Navigation.Item>
+            ))}
+          </Navigation.List>
+        </Navigation>
         <main className="flex min-h-screen flex-col pt-24">
           <Outlet />
         </main>

@@ -1,4 +1,4 @@
-import { Label } from "@ponti-studios/ui/primitives";
+import { Label } from "@ponti-studios/ui/forms";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router";
 import { Button } from "@ponti-studios/ui/primitives";
