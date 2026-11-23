@@ -620,7 +620,7 @@ packages:
     hasBin: true
 
   '@ponti-studios/ui@3.0.1':
-    resolution: {integrity: sha512-L9wMQ3/MmAnUWoshUrgStXXs5qlKeKzRdoumLEY8zXu/I43CVgH+nAt6G7Wifx2px1UTdFOICfRASombwQzNLg==}
+    resolution: {integrity: sha512-L9wMQ3/MmAnUWoshUrgStXXs5qlKeKzRdoumLEY8zXu/I43CVgH+nAt6G7Wifx2px1UTdFOICfRASombwQzNLg==, tarball: https://npm.pkg.github.com/download/@ponti-studios/ui/3.0.1/72a29583a64e235f7b7c42bc346c95cbc0be8eaf}
     hasBin: true
     peerDependencies:
       react: ^18.2.0 || ^19.0.0
